@@ -1,0 +1,1019 @@
+/* =========================================================
+   SEGURIMAX EPP
+   CATÁLOGO PROFESIONAL
+   ========================================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    width: 100%;
+    min-height: 120px;
+
+    background: linear-gradient(
+        135deg,
+        #ff6200,
+        #ff8500
+    );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.logo h1 {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.logo p {
+    margin-top: 7px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ---------- MENÚ ---------- */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: #222;
+}
+
+/* =========================================================
+   BANNER
+   ========================================================= */
+
+.banner {
+    background:
+        linear-gradient(
+            rgba(55, 25, 0, 0.92),
+            rgba(55, 25, 0, 0.92)
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.banner h2 {
+    font-size: 40px;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+    text-transform: uppercase;
+}
+
+.banner p {
+    max-width: 1100px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+/* =========================================================
+   CATEGORÍAS
+   ========================================================= */
+
+.categorias {
+    width: 100%;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding: 28px 20px;
+}
+
+.categorias button {
+    border: 2px solid #ff6500;
+
+    background: white;
+
+    color: #ff6500;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s,
+        color 0.25s,
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+.categorias button:hover {
+    background: #ff6500;
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(255, 101, 0, 0.25);
+}
+
+/* =========================================================
+   BUSCADOR
+   ========================================================= */
+
+.busqueda {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 38px 20px 25px;
+}
+
+.busqueda input {
+    width: 590px;
+    max-width: 100%;
+
+    height: 62px;
+
+    padding: 0 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 40px;
+
+    background: white;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    outline: none;
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        border 0.25s,
+        box-shadow 0.25s;
+}
+
+.busqueda input:focus {
+    border-color: #ff6500;
+
+    box-shadow:
+        0 7px 25px rgba(255, 101, 0, 0.18);
+}
+
+/* =========================================================
+   CATÁLOGO
+   ========================================================= */
+
+.catalogo {
+    width: 92%;
+    max-width: 1500px;
+
+    margin: 10px auto 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 24px;
+}
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.producto {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.14);
+}
+
+/* =========================================================
+   IMAGEN DE TARJETA
+   ========================================================= */
+
+.producto img {
+    width: 100%;
+
+    height: 290px;
+
+    object-fit: contain;
+
+    background: #f7f8f9;
+
+    padding: 10px;
+
+    display: block;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.03);
+}
+
+/* =========================================================
+   INFORMACIÓN DE TARJETA
+   ========================================================= */
+
+.producto h2 {
+    color: #ff6500;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    padding: 18px 18px 7px;
+
+    line-height: 1.3;
+}
+
+.producto p {
+    color: #444;
+
+    font-size: 15px;
+
+    padding: 0 18px 6px;
+
+    line-height: 1.6;
+}
+
+.producto .precio {
+    color: #008b25;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    padding:
+        5px 18px 12px;
+}
+
+/* =========================================================
+   BOTÓN VER PRODUCTO
+   ========================================================= */
+
+.producto button {
+    width: calc(100% - 36px);
+
+    margin:
+        auto 18px 18px;
+
+    padding: 14px 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff6500;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s,
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+.producto button:hover {
+    background: #e95600;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(255, 101, 0, 0.25);
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0, 0, 0, 0.78);
+
+    z-index: 2000;
+
+    overflow-y: auto;
+
+    padding: 25px 15px;
+}
+
+/* =========================================================
+   CONTENIDO DEL MODAL
+   ========================================================= */
+
+.modal-contenido {
+    width: 100%;
+    max-width: 1050px;
+
+    min-height: 600px;
+
+    background: white;
+
+    margin: 20px auto;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45);
+
+    animation:
+        aparecerModal 0.25s ease;
+}
+
+@keyframes aparecerModal {
+
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================================================
+   BOTÓN CERRAR
+   ========================================================= */
+
+.cerrar {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #f1f1f1;
+
+    color: #333;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 30;
+
+    transition: 0.25s;
+}
+
+.cerrar:hover {
+    background: #ff6500;
+
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+/* =========================================================
+   GALERÍA
+   ========================================================= */
+
+.galeria {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    height: 520px;
+
+    margin: 0 auto 25px;
+
+    background: #f7f8f9;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================================
+   IMAGEN PRINCIPAL DEL MODAL
+   ========================================================= */
+
+#imagenPrincipal {
+    display: block;
+
+    width: auto;
+
+    height: auto;
+
+    max-width: 78%;
+
+    max-height: 475px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   FLECHAS
+   ========================================================= */
+
+.flecha {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff6500;
+
+    color: white;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+
+    transition:
+        background 0.25s,
+        transform 0.25s;
+}
+
+.flecha:hover {
+    background: #e95600;
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+}
+
+.flecha:first-child {
+    left: 18px;
+}
+
+.flecha:last-child {
+    right: 18px;
+}
+
+/* =========================================================
+   INFORMACIÓN DEL MODAL
+   ========================================================= */
+
+#nombreProducto {
+    color: #ff6500;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+
+    margin-top: 8px;
+}
+
+#descripcionProducto {
+    color: #444;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    margin-top: 8px;
+
+    line-height: 1.6;
+}
+
+#precioProducto {
+    color: #008b25;
+
+    text-align: center;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    margin:
+        14px 0 22px;
+}
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.btnWhatsapp {
+    display: flex;
+
+    width: fit-content;
+
+    margin: 0 auto;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #25d366;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 28px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 6px 18px rgba(37, 211, 102, 0.25);
+
+    transition:
+        background 0.25s,
+        transform 0.25s;
+}
+
+.btnWhatsapp:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: #202020;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+footer h2 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ddd;
+
+    margin: 7px 0;
+}
+
+/* =========================================================
+   TABLET GRANDE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .catalogo {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    header {
+        min-height: auto;
+
+        padding: 18px 25px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 17px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .banner {
+        padding: 55px 20px;
+    }
+
+    .banner h2 {
+        font-size: 31px;
+    }
+
+    .catalogo {
+        width: 94%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .producto img {
+        height: 270px;
+    }
+
+    .modal-contenido {
+        max-width: 95%;
+
+        padding: 25px;
+    }
+
+    .galeria {
+        height: 480px;
+    }
+
+    #imagenPrincipal {
+        max-height: 440px;
+    }
+}
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+
+        padding: 17px 12px;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+    }
+
+    .logo p {
+        font-size: 12px;
+    }
+
+    nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px 17px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .banner {
+        padding: 45px 15px;
+    }
+
+    .banner h2 {
+        font-size: 24px;
+
+        line-height: 1.3;
+    }
+
+    .banner p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .categorias {
+        padding: 20px 10px;
+
+        gap: 8px;
+    }
+
+    .categorias button {
+        padding: 9px 13px;
+
+        font-size: 12px;
+    }
+
+    .busqueda {
+        padding:
+            25px 12px 15px;
+    }
+
+    .busqueda input {
+        height: 54px;
+
+        padding:
+            0 18px;
+
+        font-size: 14px;
+    }
+
+    .catalogo {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        margin-top: 5px;
+    }
+
+    .producto img {
+        height: 300px;
+
+        padding: 12px;
+    }
+
+    .producto h2 {
+        font-size: 20px;
+    }
+
+    /* ---------- MODAL ---------- */
+
+    .modal {
+        padding: 8px;
+    }
+
+    .modal-contenido {
+        width: 100%;
+
+        margin: 5px auto;
+
+        padding:
+            20px 12px 25px;
+
+        border-radius: 18px;
+    }
+
+    .cerrar {
+        width: 40px;
+        height: 40px;
+
+        top: 10px;
+        right: 10px;
+
+        font-size: 27px;
+    }
+
+    .galeria {
+        height: 430px;
+
+        margin-top: 10px;
+
+        border-radius: 14px;
+    }
+
+    #imagenPrincipal {
+        max-width: 75%;
+
+        max-height: 390px;
+    }
+
+    .flecha {
+        width: 44px;
+        height: 44px;
+
+        font-size: 21px;
+    }
+
+    .flecha:first-child {
+        left: 8px;
+    }
+
+    .flecha:last-child {
+        right: 8px;
+    }
+
+    #nombreProducto {
+        font-size: 24px;
+
+        padding:
+            0 10px;
+    }
+
+    #descripcionProducto {
+        font-size: 14px;
+
+        padding:
+            0 10px;
+    }
+
+    #precioProducto {
+        font-size: 28px;
+    }
+
+    .btnWhatsapp {
+        width: 100%;
+
+        padding: 14px 10px;
+
+        font-size: 15px;
+    }
+}
+
+/* =========================================================
+   CELULAR PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 23px;
+    }
+
+    .banner h2 {
+        font-size: 21px;
+    }
+
+    .producto img {
+        height: 270px;
+    }
+
+    .galeria {
+        height: 370px;
+    }
+
+    #imagenPrincipal {
+        max-height: 335px;
+
+        max-width: 73%;
+    }
+
+    .flecha {
+        width: 39px;
+        height: 39px;
+
+        font-size: 18px;
+    }
+
+    #nombreProducto {
+        font-size: 21px;
+    }
+
+    #precioProducto {
+        font-size: 25px;
+    }
+}

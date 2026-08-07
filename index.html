@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SEGURIMAX EPP | Catálogo</title>
+
+<link rel="stylesheet" href="estilos.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<h1>SEGURIMAX EPP</h1>
+
+<p>Equipos de Protección Personal</p>
+
+</div>
+
+<nav>
+
+<a href="#">Inicio</a>
+
+<a href="#categorias">Categorías</a>
+
+<a href="#catalogo">Catálogo</a>
+
+<a href="#contacto">Contacto</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h2>CATÁLOGO DE EQUIPOS DE PROTECCIÓN PERSONAL</h2>
+
+<p>
+
+Botas • Cascos • Parkas • Overoles • Chalecos • Mascarillas • Filtros • Protección Industrial
+
+</p>
+
+</section>
+
+<section id="categorias" class="categorias">
+
+<button onclick="filtrarCategoria('Todos')">
+
+<i class="fa-solid fa-border-all"></i>
+
+Todos
+
+</button>
+
+<button onclick="filtrarCategoria('Botas')">
+
+🥾 Botas
+
+</button>
+
+<button onclick="filtrarCategoria('Overol')">
+
+👨‍🏭 Overoles
+
+</button>
+
+<button onclick="filtrarCategoria('Parka')">
+
+🧥 Parkas
+
+</button>
+
+<button onclick="filtrarCategoria('Casco')">
+
+⛑ Cascos
+
+</button>
+
+<button onclick="filtrarCategoria('Chaleco')">
+
+🦺 Chalecos
+
+</button>
+
+<button onclick="filtrarCategoria('Filtro')">
+
+😷 Filtros
+
+</button>
+
+</section>
+
+<section class="busqueda">
+
+<input
+
+type="text"
+
+id="buscar"
+
+placeholder="🔍 Buscar producto..."
+
+onkeyup="buscarProducto()"
+
+>
+
+</section>
+
+<section id="catalogo" class="catalogo">
+
+<!-- Los productos aparecen aquí automáticamente -->
+
+</section>
+
+<!-- MODAL -->
+
+<div id="modal" class="modal">
+
+<div class="modal-contenido">
+
+<span class="cerrar"
+
+onclick="cerrarModal()">
+
+&times;
+
+</span>
+
+<div class="galeria">
+
+<button class="flecha"
+
+onclick="anterior()">
+
+❮
+
+</button>
+
+<img id="imagenPrincipal"
+
+src=""
+
+alt="Producto">
+
+<button class="flecha"
+
+onclick="siguiente()">
+
+❯
+
+</button>
+
+</div>
+
+<h2 id="nombreProducto"></h2>
+
+<p id="descripcionProducto"></p>
+
+<h3 id="precioProducto"></h3>
+
+<a
+
+id="whatsapp"
+
+target="_blank"
+
+class="btnWhatsapp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Consultar por WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+<footer id="contacto">
+
+<h2>SEGURIMAX EPP</h2>
+
+<p>
+
+Especialistas en Equipos de Protección Personal
+
+</p>
+
+<p>
+
+📍 Cochabamba - Bolivia
+
+</p>
+
+<p>
+
+📱 WhatsApp: +591 73784596
+
+</p>
+
+</footer>
+
+<script src="productos.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
